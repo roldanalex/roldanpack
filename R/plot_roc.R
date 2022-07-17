@@ -2,17 +2,17 @@
 #'
 #' This function is designed to display a ROC plot using Takeda's colors.
 #'
-#' @export
 #' @import ggplot2
 #' @import dplyr
 #' @import pROC
+#' @import plotly
 #' @param tag the predicted value.
 #' @param score the actual value.
 #' @param model_name the name of the model to be added in the plot.
 #' @param subtitle the subtitle of the model to added in the plot.
 #' @param interval interval used in the axis.
 #' @param plotly if want to convert plot into plotly.
-#'
+#' @export
 
 plot_roc <- function(tag, score, model_name = NA,
                      subtitle = NA, interval = 0.2, plotly = FALSE) {
@@ -24,8 +24,8 @@ plot_roc <- function(tag, score, model_name = NA,
 
   roc <- pROC::roc(tag, score, ci=T)
   coords <- data.frame(
-    x = rev(roc$specificities),
-    y = rev(roc$sensitivities))
+    x <- rev(roc$specificities),
+    y <- rev(roc$sensitivities))
   ci <- data.frame(roc$ci, row.names = c("min","AUC","max"))
 
   p <- ggplot(coords, aes(x = x, y = y)) +
@@ -60,8 +60,7 @@ plot_roc <- function(tag, score, model_name = NA,
   }
 
   if (plotly == TRUE) {
-    require(plotly)
-    p <- ggplotly(p)
+    p <- plotly::ggplotly(p)
   }
 
   return(p)

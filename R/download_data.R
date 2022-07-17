@@ -2,12 +2,12 @@
 #'
 #' This function is designed to download CSV data
 #'
-#' @export
 #' @import shiny
 #' @import dplyr
+#' @import readr
 #' @param exportname name of the CSV file.
 #' @param data data to be download.
-#'
+#' @export
 
 download_data <- function(exportname, data) {
   shiny::downloadHandler(
@@ -15,7 +15,7 @@ download_data <- function(exportname, data) {
       paste(exportname, "_", Sys.Date(), ".csv", sep = "")
     },
     content = function(file) {
-      write_csv(data, file)
+      readr::write_csv(data, file)
     }
   )
 }
