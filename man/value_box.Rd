@@ -2,9 +2,9 @@
 % Please edit documentation in R/value_box.R
 \name{value_box}
 \alias{value_box}
-\title{Download static plot}
+\title{Create value box for shiny}
 \usage{
-value_box(value, subtitle, icon, color, width = 3)
+value_box(value, subtitle, icon, color, width = 3, font_size = 55)
 }
 \arguments{
 \item{value}{value to be added to the box.}
@@ -16,7 +16,9 @@ value_box(value, subtitle, icon, color, width = 3)
 \item{color}{choose the color of the box.}
 
 \item{width}{width size for the box.}
+
+\item{font_size}{size of the font used for the box.}
 }
 \description{
-This function is designed to download plots
+This function will create a value box for shiny
 }
