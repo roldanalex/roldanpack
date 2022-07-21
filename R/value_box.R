@@ -12,7 +12,7 @@
 #' @export
 
 value_box <- function(value, subtitle, icon, color, width = 3) {
-  div(class = paste0("col-lg-", width, "col-md-6"),
+  div(class = paste0("col-lg-", width, " col-md-6"),
       div(class = "panel panel-primary",
           div(class = "panel-heading", style = paste0("background-color:", color),
               div(class = "row",
