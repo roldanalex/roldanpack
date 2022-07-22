@@ -5,7 +5,7 @@
 #' @import ggplot2
 #' @import dplyr
 #' @import pROC
-#' @import plotly
+#' @importFrom plotly ggplotly
 #' @param tag the predicted value.
 #' @param score the actual value.
 #' @param model_name the name of the model to be added in the plot.

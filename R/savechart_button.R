@@ -2,7 +2,6 @@
 #'
 #' This function will create a CSS script for save chart button
 #'
-#' @import plotly
 #' @import dplyr
 #' @import shinyBS
 #' @param outputId output id for the button.

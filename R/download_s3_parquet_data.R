@@ -5,7 +5,7 @@
 #' @import aws.s3
 #' @import dplyr
 #' @import tidyr
-#' @import arrow
+#' @importFrom arrow read_parquet
 #' @import lubridate
 #' @importFrom utils head
 #' @param bucket_name name of the s3 bucket.
