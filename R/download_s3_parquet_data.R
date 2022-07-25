@@ -36,7 +36,7 @@ download_s3_parquet_data <- function(bucket_name, prefix_name, aws_access_key_id
 
     Raw.data <- aws.s3::s3read_using(
       FUN = arrow::read_parquet,
-      object = last_tw_event_file,
+      object = last_parquet_file,
       bucket = bucket_name)
 
   } else {
