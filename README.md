@@ -8,7 +8,7 @@ Welcome to my personal package with functions that I use daily.
 
 ## Installation
 
-You can install the development version of roldanpack like so:
+You can install the development version of roldanpack like this:
 
 ``` r
 # Install the package from Github
