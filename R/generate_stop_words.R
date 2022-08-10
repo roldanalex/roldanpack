@@ -18,7 +18,9 @@ generate_stop_words <- function(list, type_list = "site"){
     while (i < (length(list) + 1)) {
 
       if (("Buenos Aires Plant - Argentina" %in% list) |
-          ("Naucalpan Plant - Mexico" %in% list)) {
+          ("Naucalpan Plant - Mexico" %in% list) |
+          ("Tres Cantos Plant - Spain" %in% list)
+          ) {
 
         stop_word_list <-
           append(stop_word_list,
@@ -48,11 +50,21 @@ generate_stop_words <- function(list, type_list = "site"){
       } else if (("Linz Plant - Austria" %in% list) |
                  ("Oranienburg Plant - Germany" %in% list) |
                  ("Singen Plant - Germany" %in% list) |
-                 ("Vienna Plant - Austria" %in% list)) {
+                 ("Vienna Plant - Austria" %in% list) |
+                 ("Orth Plant - Austria" %in% list) |
+                 ("Neuchatel Plant - Switzerland" %in% list)
+                 ) {
 
         stop_word_list <-
           append(stop_word_list,
                  stopwords::stopwords(language = "de")
+          )
+
+      } else if ("Grange Castle - P3" %in% list) {
+
+        stop_word_list <-
+          append(stop_word_list,
+                 stopwords::stopwords(language = "ga", source = "stopwords-iso")
           )
 
       } else {
@@ -102,6 +114,13 @@ generate_stop_words <- function(list, type_list = "site"){
         stop_word_list <-
           append(stop_word_list,
                  stopwords::stopwords(language = "de")
+          )
+
+      } else if ("irish" %in% list) {
+
+        stop_word_list <-
+          append(stop_word_list,
+                 stopwords::stopwords(language = "ga", source = "stopwords-iso")
           )
 
       } else {
