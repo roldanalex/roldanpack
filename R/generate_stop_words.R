@@ -84,39 +84,42 @@ generate_stop_words <- function(list, type_list = "site"){
 
     while (i < (length(list) + 1)) {
 
-      if ("spanish" %in% list) {
+      if ("spanish" %in% list[i]) {
 
         stop_word_list <-
           append(stop_word_list,
                  stopwords::stopwords(language = "es", source = "stopwords-iso")
           )
 
-      } else if ("japanese" %in% list) {
+      } else if ("japanese" %in% list[i]) {
 
         stop_word_list <-
           append(stop_word_list,
                  stopwords::stopwords(language = "ja", source = "marimo")
           )
 
-      } else if ("italian" %in% list) {
+      } else if ("italian" %in% list[i]) {
 
         stop_word_list <-
           append(stop_word_list,
                  stopwords::stopwords(language = "it", source = "stopwords-iso")
           )
 
-      } else if ("french" %in% list) {
+      } else if ("french" %in% list[i]) {
 
-        stopwords::stopwords(language = "fr", source = "stopwords-iso")
+        stop_word_list <-
+          append(stop_word_list,
+                 stopwords::stopwords(language = "fr", source = "stopwords-iso")
+          )
 
-      } else if ("german" %in% list) {
+      } else if ("german" %in% list[i]) {
 
         stop_word_list <-
           append(stop_word_list,
                  stopwords::stopwords(language = "de")
           )
 
-      } else if ("irish" %in% list) {
+      } else if ("irish" %in% list[i]) {
 
         stop_word_list <-
           append(stop_word_list,
