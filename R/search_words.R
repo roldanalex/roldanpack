@@ -13,6 +13,7 @@
 #' @param id id column from dataset.
 #' @param stop_words list of stopwords (vector).
 #' @param n_top max number of results.
+#' @param list_n number of dataset within list
 #' @export
 
 search_words <- function(data, token_list, query, id,
