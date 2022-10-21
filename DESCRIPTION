@@ -18,11 +18,13 @@ Imports:
     lubridate,
     plotly,
     pROC,
+    purrr,
     quanteda,
     readr,
     shiny,
     shinyBS,
     stopwords,
+    stringr,
     tidyr,
     tidytext,
     utils

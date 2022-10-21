@@ -6,7 +6,6 @@
 #' @import dplyr
 #' @import tidyr
 #' @import tidytext
-#' @import tidyr
 #' @param data data to be tokenized.
 #' @param remove_stopwords boolean to decide if need to remove stop words.
 #' @param no.words number of words to analyze (ngram).
