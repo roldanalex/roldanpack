@@ -4,7 +4,7 @@
 \alias{search_words}
 \title{Create a search word engine}
 \usage{
-search_words(data, token_list, query, id, list_n = 3, stop_words, n_top = 200)
+search_words(data, token_list, query, id, stop_words, list_n = 3)
 }
 \arguments{
 \item{data}{data to be processed.}
@@ -15,11 +15,9 @@ search_words(data, token_list, query, id, list_n = 3, stop_words, n_top = 200)
 
 \item{id}{id column from dataset.}
 
-\item{list_n}{number of dataset within list}
-
 \item{stop_words}{list of stopwords (vector).}
 
-\item{n_top}{max number of results.}
+\item{list_n}{number of dataset within list}
 }
 \description{
 This function look for specific keywords within dataset.

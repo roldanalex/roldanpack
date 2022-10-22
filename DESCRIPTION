@@ -1,7 +1,7 @@
 Package: roldanpack
 Title: Personal R Packages of Alexis Roldan
 Description: Here you will find most R functions that I use for my personal use.
-Version: 1.2
+Version: 1.2.2
 Authors@R: c(person("Alexis", "Roldan", email = "alexis.m.roldan.ds@gmail.com", role = c("aut", "cre")))
 Maintainer: Alexis Roldan <alexis.m.roldan.ds@gmail.com>
 License: GPL (>= 3)
